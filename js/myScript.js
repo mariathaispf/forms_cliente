@@ -7,8 +7,9 @@ function submitForm(event) {
         const tipoCliente = document.getElementById('tipoCliente').value;
         const endereco = document.getElementById('endereco').value;
         const cep = document.getElementById('cep').value;
-        const email = document.getElementById('email').value;
+        const rua = document.getElementById('rua').value;
         const dataNascimento = document.getElementById('dataNascimento').value;
+        const telefone = document.getElementById('dataNascimento').value;
         const vendedor = document.getElementById('vendedor').value;
         const limiteCredito = document.getElementById('limiteCredito').value;
 
@@ -16,6 +17,12 @@ function submitForm(event) {
 
         if (!/^[a-zA-Z\s]+$/.test(nome)) {
             errorMessages.push('O nome deve conter apenas letras.');
+        }
+        if (!/^[a-zA-Z\s]+$/.test(rua)) {
+            errorMessages.push('O nome deve conter apenas letras.');
+        }
+        if (!telefone || isNaN(telefone)) {
+            errorMessages.push('O telefone deve ser somente números.');
         }
 
         if (!id || isNaN(id)) {
@@ -44,6 +51,12 @@ function submitForm(event) {
         alert('Ocorreram os seguintes erros no cadastro:\n' + error.message);
         console.error(error);
     }
+}
+function validateEmail(email) {
+    const atIndex = email.indexOf('@');
+    const dotIndex = email.lastIndexOf('.');
+
+    return atIndex > 0 && dotIndex > atIndex;
 }
 
 window.onload = function() {
