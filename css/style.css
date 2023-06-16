@@ -1,17 +1,12 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-dark1);
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: rgb(24, 82, 139);
+    color: #ffffff;
 }
 
 h1 {
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    
 }
 
 form {
@@ -21,70 +16,34 @@ form {
     margin: 0 auto;
 }
 
-.tipo {
-    display: grid;
-    grid-gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-    width: 100%;
-}
-
 label {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="date"],
-
 select {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #b9b9b9;
+    color:rgb(78, 78, 78);
+    font-weight: bolder;
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        max-width: 90%;
-    }
-}
-
-:root{
-    --color-white: #fff;
-    --color-red: #e63636;
-    --color-dark1: #181818;
-    --color-dark2: #1e1e1e;
-    --color-purple1: #9333FF;
-    --color-purple2: indigo;
-}
-
-.box-select{
-    display: flex;
-    justify-content: space-evenly;
-    font-weight: bold;
-    gap: 1rem;
-    
-}
-
-button[type="submit"]{
-    padding: 1rem;
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin-top: 1rem;
-    background-color: var(--color-purple2);
-    color: var(--color-white);
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #b9b9b9;
+    color: rgb(78, 78, 78);
+    border: 2px solid #ffffff;
+    border-radius: 3px;
     cursor: pointer;
-    transition: .3s;
 }
 
-button[type="submit"]:hover{
-    background-color: var(--color-purple1);
+button[type="submit"]:hover {
+    background-color: #858080;
 }
-
-
-
-
